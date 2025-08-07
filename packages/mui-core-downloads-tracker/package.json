@@ -27,5 +27,6 @@
   "publishConfig": {
     "access": "public",
     "directory": "build"
-  }
+  },
+  "private": true
 }

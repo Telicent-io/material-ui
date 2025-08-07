@@ -117,5 +117,6 @@
         "@emotion/react"
       ]
     }
-  }
+  },
+  "private": true
 }

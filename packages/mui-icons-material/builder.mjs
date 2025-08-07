@@ -330,7 +330,7 @@ if (isRunningDirectlyViaCLI) {
           .option('file-suffix', {
             type: 'string',
             describe:
-              'Filter only files ending with a suffix (pretty much only for @mui/icons-material)',
+              'Filter only files ending with a suffix (pretty much only for @telicent-oss/icons-material)',
           })
           .option('rename-filter', {
             type: 'string',

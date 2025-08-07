@@ -1,8 +1,8 @@
 {
-  "name": "@mui/icons-material",
+  "name": "@telicent-oss/icons-material",
   "version": "7.3.1",
-  "author": "MUI Team",
-  "description": "Material Design icons distributed as SVG React components.",
+  "author": "MUI Team and Telicent",
+  "description": "Telicent's used Material Design icons distributed as SVG React components.",
   "main": "./src/index.js",
   "keywords": [
     "react",
@@ -27,18 +27,18 @@
     "url": "https://opencollective.com/mui-org"
   },
   "scripts": {
-    "build": "shx cp -r lib/ build/ && pnpm build:copy-files && pnpm build:typings && pnpm build:esm-pkg",
-    "build:esm-pkg": "node ./scripts/create-esm-package-json.mjs",
-    "build:lib": "pnpm build:node && pnpm build:stable",
-    "build:lib:clean": "rimraf lib/ && pnpm build:lib",
+    "src:icons": "cross-env UV_THREADPOOL_SIZE=64 node ./builder.mjs --output-dir src --svg-dir material-icons --rename-filter ./renameFilters/material-design-icons.mjs --glob \"**/{Home,Search,Settings}_24px.svg\" && rm -rf src/legacy src/custom",
+    "prebuild": "rimraf build",
     "build:node": "node ../../scripts/build.mjs node --largeFiles --outDir lib",
     "build:stable": "node ../../scripts/build.mjs stable --largeFiles --outDir lib --skipEsmPkg",
+    "build:lib": "npm run src:icons && npm run build:node && npm run build:stable",
+    "build:lib:clean": "rimraf lib/ && npm run build:lib",
     "build:copy-files": "node ../../scripts/copyFiles.mjs",
     "build:typings": "node ./scripts/create-typings.mjs",
-    "prebuild": "rimraf build",
-    "release": "pnpm build && pnpm publish",
+    "build:esm-pkg": "node ./scripts/create-esm-package-json.mjs",
+    "build": "npm run build:lib:clean && shx cp -r lib/ build/ && npm run build:copy-files && npm run build:typings && npm run build:esm-pkg",
+    "release": "npm run build && npm publish",
     "src:download": "node ./scripts/download.mjs",
-    "src:icons": "cross-env UV_THREADPOOL_SIZE=64 node ./builder.mjs --output-dir src --svg-dir material-icons --renameFilter ./renameFilters/material-design-icons.mjs && pnpm build:lib:clean",
     "test": "cd ../../ && cross-env NODE_ENV=test mocha 'packages/mui-icons-material/**/*.test.?(c|m)[jt]s?(x)'",
     "typescript": "tsc -p tsconfig.json",
     "attw": "attw --pack ./build --exclude-entrypoints esm --include-entrypoints Close"
@@ -47,7 +47,7 @@
     "@babel/runtime": "^7.28.2"
   },
   "devDependencies": {
-    "@mui/icons-material": "workspace:*",
+    "@telicent-oss/icons-material": "workspace:*",
     "@mui/internal-waterfall": "workspace:^",
     "@mui/material": "workspace:^",
     "@types/chai": "^4.3.20",

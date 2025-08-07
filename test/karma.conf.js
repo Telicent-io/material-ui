@@ -152,7 +152,7 @@ module.exports = function setKarmaConfig(config) {
                         // all packages in this monorepo
                         '@mui/material': './packages/mui-material/src',
                         '@mui/docs': './packages/mui-docs/src',
-                        '@mui/icons-material': './packages/mui-icons-material/lib',
+                        '@telicent-oss/icons-material': './packages/mui-icons-material/lib',
                         '@mui/lab': './packages/mui-lab/src',
                         '@mui/styled-engine': './packages/mui-styled-engine/src',
                         '@mui/system': './packages/mui-system/src',

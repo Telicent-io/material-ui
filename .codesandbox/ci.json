@@ -28,7 +28,7 @@
     "@mui/core-downloads-tracker": "packages/mui-core-downloads-tracker/build",
     "@mui/docs": "packages/mui-docs/build",
     "@mui/envinfo": "packages/mui-envinfo/build",
-    "@mui/icons-material": "packages/mui-icons-material/build",
+    "@telicent-oss/icons-material": "packages/mui-icons-material/build",
     "@mui/internal-test-utils": "packages-internal/test-utils",
     "@mui/internal-docs-utils": "packages-internal/docs-utils",
     "@mui/internal-markdown": "packages/markdown",

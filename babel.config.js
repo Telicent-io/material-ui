@@ -24,7 +24,7 @@ module.exports = function getBabelConfig(api) {
   const defaultAlias = {
     '@mui/material': resolveAliasPath('./packages/mui-material/src'),
     '@mui/docs': resolveAliasPath('./packages/mui-docs/src'),
-    '@mui/icons-material': resolveAliasPath(
+    '@telicent-oss/icons-material': resolveAliasPath(
       `./packages/mui-icons-material/lib${useESModules ? '/esm' : ''}`,
     ),
     '@mui/lab': resolveAliasPath('./packages/mui-lab/src'),

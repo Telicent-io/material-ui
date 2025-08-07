@@ -80,5 +80,6 @@
     "./v13-pagesRouter": {
       "mui-src": "./src/v13-pagesRouter/index.ts"
     }
-  }
+  },
+  "private": true
 }

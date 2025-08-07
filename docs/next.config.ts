@@ -95,11 +95,11 @@ export default withDocsInfra({
           '@mui/material': path.resolve(workspaceRoot, 'packages/mui-material/src'),
 
           '@mui/docs': path.resolve(workspaceRoot, 'packages/mui-docs/src'),
-          '@mui/icons-material$': path.resolve(
+          '@telicent-oss/icons-material$': path.resolve(
             workspaceRoot,
             'packages/mui-icons-material/lib/esm/index.js',
           ),
-          '@mui/icons-material': path.resolve(workspaceRoot, 'packages/mui-icons-material/lib/esm'),
+          '@telicent-oss/icons-material': path.resolve(workspaceRoot, 'packages/mui-icons-material/lib/esm'),
           '@mui/lab': path.resolve(workspaceRoot, 'packages/mui-lab/src'),
           '@mui/styled-engine': path.resolve(workspaceRoot, 'packages/mui-styled-engine/src'),
           '@mui/system': path.resolve(workspaceRoot, 'packages/mui-system/src'),

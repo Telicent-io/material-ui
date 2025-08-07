@@ -1,11 +1,12 @@
 packages:
-  - packages/*
-  - packages/mui-envinfo/test
-  - packages-internal/*
-  - docs
-  - test
-  - test/*
-  - apps/*
+  # Telicent only wants mui-icons-material
+  - 'packages/mui-icons-material'
+  # exclude everything else
+  - '!packages/*'
+  - '!packages-internal/*'
+  - '!apps/*'
+  - '!docs'
+  - '!test'
 
 patchedDependencies:
   styled-components: patches/styled-components.patch
